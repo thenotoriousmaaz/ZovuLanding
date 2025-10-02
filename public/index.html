@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZOVU — One Solution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <!-- Header / Nav (simple placeholder) -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#">ZOVU</a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section: background video placeholder -->
+  <section class="hero" id="hero">
+    <div class="hero__media" aria-hidden="true">
+      <!-- TODO: Replace with autoplaying muted loop video source later -->
+      <div class="hero__video--placeholder"></div>
+    </div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow">LEARN WHY WE CREATED ZOVU</p>
+      <h1 class="hero__title">We offer One Solution<br>for your whole Restaurant</h1>
+      <div class="hero__cta">
+        <a class="link-underline" href="#contact">Contact Sales</a>
+        <form class="cta-form" action="#" method="post" onsubmit="return false;">
+          <input type="email" placeholder="Become one of our first restaurants" aria-label="Email">
+          <button type="submit" aria-label="Submit">→</button>
+        </form>
+      </div>
+      <p class="hero__subtext">Replace fragmented tools with one platform—faster setup, lower cost.</p>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true"></div>
+  </section>
+
+  <!-- Image Sections scaffolded in the order of provided screenshots -->
+  <main>
+    <!-- ZOVU OS section -->
+    <section class="section section--light" id="zovu-os">
+      <div class="container text-center">
+        <h2 class="section__title">ZOVU OS</h2>
+        <p class="section__subtitle">One Centralized System. Starting from €0</p>
+        <a class="btn btn--primary" href="#contact">JOIN FOR €0</a>
+        <div class="device-pair">
+          <img src="/public/assets/images/device-left.png" alt="Device left placeholder">
+          <img src="/public/assets/images/device-right.png" alt="Device right placeholder">
+        </div>
+      </div>
+    </section>
+
+    <!-- POS features with accordion + image -->
+    <section class="section section--split" id="pos-features">
+      <div class="container split">
+        <div class="split__left">
+          <p class="eyebrow">{Point Of Sales}</p>
+          <h3 class="display">Some of our <span class="accent">features</span> that makes us the best</h3>
+          <a class="link-underline" href="#">Check out our Pos Solution</a>
+
+          <div class="accordion" data-accordion>
+            <button class="accordion__item" aria-expanded="true">
+              <span>One Centralized OS</span>
+            </button>
+            <div class="accordion__panel">
+              <p>See who reserved online/offline, no need for a 3rd party system—saving you money.</p>
+              <a class="link-underline" href="#">Learn more</a>
+            </div>
+
+            <button class="accordion__item" aria-expanded="false">
+              <span>Reservations in your POS</span>
+            </button>
+            <div class="accordion__panel" hidden></div>
+
+            <button class="accordion__item" aria-expanded="false">
+              <span>Data Overload</span>
+            </button>
+            <div class="accordion__panel" hidden></div>
+
+            <button class="accordion__item" aria-expanded="false">
+              <span>Ease of use</span>
+            </button>
+            <div class="accordion__panel" hidden></div>
+          </div>
+        </div>
+        <div class="split__right">
+          <img class="carded" src="/public/assets/images/pos-preview.png" alt="POS preview placeholder">
+        </div>
+      </div>
+    </section>
+
+    <!-- Unlock Potential Cards -->
+    <section class="section section--light" id="unlock">
+      <div class="container">
+        <h3 class="display">Unlock <span class="accent">your</span> Restaurant Potential</h3>
+        <p class="section__subtitle">Our unique features and one connected OS set us apart</p>
+        <div class="cards-grid">
+          <article class="card">
+            <h4>One OS for Everything</h4>
+            <img src="/public/assets/images/tablet-tilted.png" alt="Tablet placeholder">
+            <a class="link-underline" href="#">Learn More</a>
+          </article>
+          <article class="card">
+            <h4>Reservations</h4>
+            <img src="/public/assets/images/tablet-tilted.png" alt="Tablet placeholder">
+            <a class="link-underline" href="#">Learn More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer App section -->
+    <section class="section section--split" id="customer-app">
+      <div class="container split">
+        <div class="split__left">
+          <img class="shadowed" src="/public/assets/images/phone-in-hand.png" alt="Phone app placeholder">
+        </div>
+        <div class="split__right">
+          <p class="eyebrow">{Our Customer App}</p>
+          <h3 class="display">We Will get you <span class="accent">New Customers</span></h3>
+          <p>The ZOVU Diner App, built into our OS, grows visibility and repeat visits—so you seat more guests, more often.</p>
+          <a class="link-underline" href="#">Learn about Our App</a>
+          <div class="accordion" data-accordion>
+            <button class="accordion__item" aria-expanded="true"><span>Showing your Restaurant</span></button>
+            <div class="accordion__panel">
+              <p>Post on our food feed to get new customers and post about your restaurant.</p>
+              <a class="link-underline" href="#">Learn more</a>
+            </div>
+            <button class="accordion__item" aria-expanded="false"><span>Using ZOVU Points</span></button>
+            <div class="accordion__panel" hidden></div>
+            <button class="accordion__item" aria-expanded="false"><span>Food Feed</span></button>
+            <div class="accordion__panel" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Designed for every Style of Restaurants: Category cards -->
+    <section class="section" id="categories">
+      <div class="container">
+        <h3 class="display">Designed for every Style of Restaurants</h3>
+        <p class="section__subtitle">No sector is left out</p>
+        <div class="categories-grid">
+          <div class="category-card"><img src="/public/assets/images/casual-dining.jpg" alt="Casual Dining"><span>Casual· Dining</span></div>
+          <div class="category-card"><img src="/public/assets/images/fine-dining.jpg" alt="Fine Dining"><span>Fine-Dining</span></div>
+          <div class="category-card"><img src="/public/assets/images/bars-coffee.jpg" alt="Bars & Coffee"><span>Bars & Coffee Shops</span></div>
+          <div class="category-card"><img src="/public/assets/images/quick-service.jpg" alt="Quick Service"><span>Quick-Service</span></div>
+          <div class="category-card"><img src="/public/assets/images/chains.jpg" alt="Chains"><span>Chain</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing comparison + FAQ + Contact form -->
+    <section class="section section--split" id="pricing">
+      <div class="container split">
+        <div class="split__left">
+          <img class="shadowed" src="/public/assets/images/pricing-sheet.png" alt="Pricing comparison placeholder">
+        </div>
+        <div class="split__right">
+          <h3 class="display">It Cost literally <span class="accent">€0.00</span> to start</h3>
+          <p>In comparison to competitors it can save your restaurant about €1.450 a month</p>
+
+          <div class="accordion" data-accordion>
+            <button class="accordion__item" aria-expanded="true"><span>How are these Prices this low?</span></button>
+            <div class="accordion__panel">
+              <p>Post on our food feed to get new customers and post about your restaurant</p>
+              <a class="link-underline" href="#">Learn more</a>
+            </div>
+            <button class="accordion__item" aria-expanded="false"><span>What if I want to stop it?</span></button>
+            <div class="accordion__panel" hidden></div>
+            <button class="accordion__item" aria-expanded="false"><span>How can I start?</span></button>
+            <div class="accordion__panel" hidden></div>
+          </div>
+
+          <form id="contact" class="contact-form">
+            <label>Let's get in contact</label>
+            <div class="cta-form">
+              <input type="email" placeholder="your email address" aria-label="Email">
+              <button type="submit" aria-label="Submit">→</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> ZOVU</small>
+    </div>
+  </footer>
+
+  <script src="/src/js/main.js"></script>
+</body>
+</html>
+
+
