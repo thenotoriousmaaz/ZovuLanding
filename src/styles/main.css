@@ -74,7 +74,11 @@ body {
   text-align: center;
 }
 .hero__eyebrow {
-  margin-top: 64px;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
@@ -116,13 +120,23 @@ body {
 }
 .cta-form button {
   border: 0;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: var(--white);
+  background: var(--white);
+  color: var(--text);
   padding: 0 18px;
   font-size: 20px;
   cursor: pointer;
+  border-left: 1px solid rgba(0,0,0,0.08);
 }
-.hero__subtext { color: #bdbdcc; margin-top: 40px; }
+.hero__subtext {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 96px;
+  margin: 0;
+  color: #bdbdcc;
+  text-align: center;
+  width: min(92vw, 920px);
+}
 .hero__scroll-indicator {
   position: absolute;
   left: 50%;
