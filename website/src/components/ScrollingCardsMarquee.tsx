@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 
 type CardItem = {
@@ -19,10 +18,15 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
   const loopItems = React.useMemo(() => [...items, ...items], [items]);
 
   return (
-    <section aria-label="Featured categories" className="w-full bg-white py-14 text-neutral-900">
+    <section aria-label="Designed for every Style of Restaurants" className="w-full bg-white py-16 text-neutral-900">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-center text-2xl font-semibold">What sets ZOVU apart</h2>
-        <p className="mt-1 text-center text-sm text-neutral-500">Always-on highlights from our platform</p>
+        <h2
+          className="text-center text-3xl font-bold text-neutral-900 sm:text-4xl md:text-5xl"
+          style={{ fontFamily: "var(--font-libre-baskerville)" }}
+        >
+          Designed for every Style of Restaurants
+        </h2>
+        <p className="mt-2 text-center text-sm text-neutral-500">No sector is left out</p>
       </div>
 
       <div className="relative mt-6 overflow-hidden">
@@ -33,20 +37,24 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
           {loopItems.map((item, idx) => (
             <article
               key={`${item.title}-${idx}`}
-              className="mx-2 flex w-[280px] shrink-0 flex-col overflow-hidden rounded-xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5"
+              className="mx-3 relative w-[320px] h-[440px] shrink-0 overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.2)] ring-1 ring-black/10"
             >
+              {/* Full-image card */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={item.imageSrc}
                 alt={item.title}
-                className="h-40 w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
               />
-              <div className="flex flex-1 flex-col p-3">
-                <h3 className="text-[15px] font-semibold">{item.title}</h3>
-                {item.subtitle ? (
-                  <p className="mt-1 text-xs text-neutral-500">{item.subtitle}</p>
-                ) : null}
+              {/* subtle dark overlay to ensure contrast */}
+              <div className="absolute inset-0 bg-black/25" />
+
+              {/* Centered white title */}
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <h3 className="px-4 text-center text-xl font-semibold tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                  {item.title}
+                </h3>
               </div>
             </article>
           ))}
