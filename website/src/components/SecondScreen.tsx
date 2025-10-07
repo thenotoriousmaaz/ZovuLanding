@@ -4,13 +4,15 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const TabletsCanvas = dynamic(() => import("@/components/TabletsCanvas"), { ssr: false });
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import SignupModal from "@/components/SignupModal";
 
 export default function SecondScreen() {
     const ref = useRef<HTMLDivElement | null>(null);
     const inView = useInView(ref, { amount: 0.4, once: true });
     const controls = useAnimation();
+    const [openSignup, setOpenSignup] = useState(false);
 
     useEffect(() => {
         if (inView) {
@@ -46,7 +48,7 @@ export default function SecondScreen() {
                 variants={{ visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.4, delay: 0.2 }}
             >
-                <Button className="bg-[#3D3ADB] px-6 text-white hover:bg-[#3D3ADB]">JOIN FOR €0</Button>
+                <Button onClick={() => setOpenSignup(true)} className="bg-[#3D3ADB] px-6 text-white hover:bg-[#3D3ADB]">JOIN FOR €0</Button>
             </motion.div>
 
             <motion.div
@@ -58,6 +60,7 @@ export default function SecondScreen() {
             >
                 <TabletsCanvas />
             </motion.div>
+            <SignupModal open={openSignup} onClose={() => setOpenSignup(false)} />
         </section>
     );
 }
