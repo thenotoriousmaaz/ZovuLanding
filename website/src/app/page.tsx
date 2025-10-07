@@ -4,6 +4,7 @@ import ThirdScreen from "@/components/ThirdScreen";
 import FourthScreen from "@/components/FourthScreen";
 import FifthScreen from "@/components/FifthScreen";
 import ScrollingCardsMarquee from "@/components/ScrollingCardsMarquee";
+import PricingSection from "@/components/PricingSection";
 
 export default function Home() {
   return (
@@ -63,14 +64,15 @@ export default function Home() {
     {/* Scrolling cards marquee */}
     <ScrollingCardsMarquee
       items={[
-        { title: "Inventory sync", subtitle: "Real-time stock across outlets", imageSrc: "/images/tab1.jpg" },
-        { title: "Seamless reservations", subtitle: "POS-native table view", imageSrc: "/images/tab2.jpg" },
-        { title: "Customer insights", subtitle: "Drive repeat visits", imageSrc: "/images/tab1.jpg" },
-        { title: "Unified menu", subtitle: "Everywhere at once", imageSrc: "/images/tab2.jpg" },
-        { title: "Kitchen display", subtitle: "Faster ticket times", imageSrc: "/images/tab1.jpg" },
+        { title: "Casual· Dining", imageSrc: "/images/tab1.jpg" },
+        { title: "Fine-Dining", imageSrc: "/images/tab2.jpg" },
+        { title: "Bars & Coffee Shops", imageSrc: "/images/tab1.jpg" },
+        { title: "Quick-Service", imageSrc: "/images/tab2.jpg" },
+        { title: "Chain", imageSrc: "/images/tab1.jpg" },
       ]}
       speedMs={26000}
     />
+    <PricingSection />
     </>
   );
 }
