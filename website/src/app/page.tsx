@@ -3,6 +3,7 @@ import SecondScreen from "@/components/SecondScreen";
 import ThirdScreen from "@/components/ThirdScreen";
 import FourthScreen from "@/components/FourthScreen";
 import FifthScreen from "@/components/FifthScreen";
+import ScrollingCardsMarquee from "@/components/ScrollingCardsMarquee";
 
 export default function Home() {
   return (
@@ -59,6 +60,17 @@ export default function Home() {
     {/* Fifth screen */}
     {/* @ts-expect-error Server Component boundary for client component import */}
     <FifthScreen />
+    {/* Scrolling cards marquee */}
+    <ScrollingCardsMarquee
+      items={[
+        { title: "Inventory sync", subtitle: "Real-time stock across outlets", imageSrc: "/images/tab1.jpg" },
+        { title: "Seamless reservations", subtitle: "POS-native table view", imageSrc: "/images/tab2.jpg" },
+        { title: "Customer insights", subtitle: "Drive repeat visits", imageSrc: "/images/tab1.jpg" },
+        { title: "Unified menu", subtitle: "Everywhere at once", imageSrc: "/images/tab2.jpg" },
+        { title: "Kitchen display", subtitle: "Faster ticket times", imageSrc: "/images/tab1.jpg" },
+      ]}
+      speedMs={22000}
+    />
     </>
   );
 }

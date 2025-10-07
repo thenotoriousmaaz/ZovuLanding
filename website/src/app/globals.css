@@ -120,3 +120,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Marquee animation for scrolling cards */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee {
+  animation-name: marquee-left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
