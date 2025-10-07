@@ -37,7 +37,7 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
           {loopItems.map((item, idx) => (
             <article
               key={`${item.title}-${idx}`}
-              className="mx-3 relative w-[320px] h-[440px] shrink-0 overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.2)] ring-1 ring-black/10"
+              className="mx-3 relative w-[320px] h-[440px] shrink-0 overflow-hidden rounded-none shadow-[0_16px_40px_rgba(0,0,0,0.2)] ring-1 ring-black/10"
             >
               {/* Full-image card */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -48,11 +48,11 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
                 loading="lazy"
               />
               {/* subtle dark overlay to ensure contrast */}
-              <div className="absolute inset-0 bg-black/25" />
+              <div className="absolute inset-0 bg-black/20" />
 
               {/* Centered white title */}
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <h3 className="px-4 text-center text-xl font-semibold tracking-wide text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                <h3 className="px-4 text-center text-2xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                   {item.title}
                 </h3>
               </div>

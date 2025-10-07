@@ -69,7 +69,7 @@ export default function Home() {
         { title: "Unified menu", subtitle: "Everywhere at once", imageSrc: "/images/tab2.jpg" },
         { title: "Kitchen display", subtitle: "Faster ticket times", imageSrc: "/images/tab1.jpg" },
       ]}
-      speedMs={22000}
+      speedMs={26000}
     />
     </>
   );
