@@ -3,6 +3,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function SignupPage() {
   return (
@@ -50,7 +51,9 @@ export default function SignupPage() {
               </span>
             </label>
 
-            <Button className="mt-4 h-12 w-full rounded-md bg-[#3D3ADB] text-white hover:bg-[#3D3ADB]">NEXT STEP</Button>
+            <Button asChild className="mt-4 h-12 w-full rounded-md bg-[#3D3ADB] text-white hover:bg-[#3D3ADB]">
+              <Link href="/signup/step2">NEXT STEP</Link>
+            </Button>
 
             <div className="mt-4 flex items-center justify-center gap-2">
               <span className="h-2 w-2 rounded-full bg-[#3D3ADB]" />
