@@ -5,6 +5,7 @@ import FourthScreen from "@/components/FourthScreen";
 import FifthScreen from "@/components/FifthScreen";
 import ScrollingCardsMarquee from "@/components/ScrollingCardsMarquee";
 import PricingSection from "@/components/PricingSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
