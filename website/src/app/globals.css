@@ -127,8 +127,4 @@
   to { transform: translateX(-50%); }
 }
 
-.marquee {
-  animation-name: marquee-left;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+.marquee { animation: marquee-left linear infinite; }

@@ -29,10 +29,10 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
         <p className="mt-2 text-center text-sm text-neutral-500">No sector is left out</p>
       </div>
 
-      <div className="relative mt-6 overflow-visible">
+      <div className="relative mt-6 overflow-hidden">
         <div
-          className="marquee flex w-[200%] items-stretch motion-reduce:animate-none"
-          style={{ animationDuration: `${speedMs}ms` }}
+          className="marquee flex w-[200%] items-stretch"
+          style={{ animationDuration: `${speedMs}ms`, willChange: "transform" }}
         >
           {loopItems.map((item, idx) => (
             <article
