@@ -8,14 +8,14 @@ import Link from "next/link";
 export default function SignupStep2() {
   return (
     <main className="min-h-screen bg-neutral-50">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-10 md:grid-cols-2">
+      <div className="mx-auto grid min-h-screen max-w-6xl grid-cols-1 items-center gap-6 px-4 py-10 md:grid-cols-2">
         <div className="hidden md:block">
           <div className="h-[720px] w-full rounded-xl bg-neutral-200" />
         </div>
 
-        <section>
-          <div className="text-3xl font-extrabold text-[#0F0E47]" style={{ letterSpacing: ".02em" }}>ZOVU OS</div>
-          <div className="mt-1 text-2xl text-neutral-900">Lets get to know you and your company</div>
+        <section className="mx-auto w-full max-w-md">
+          <div className="bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-3xl font-extrabold text-transparent" style={{ letterSpacing: ".02em" }}>ZOVU OS</div>
+          <div className="mt-1 text-2xl text-neutral-900">Let’s get to know you and your company</div>
 
           <form className="mt-6 space-y-4">
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -40,7 +40,7 @@ export default function SignupStep2() {
               </div>
             </div>
 
-            <div className="mt-4 text-sm font-medium text-neutral-700">Juristiction Information</div>
+            <div className="mt-4 text-sm font-medium text-neutral-700">Jurisdiction Information</div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div>
                 <Label htmlFor="companyNumber">Company Number</Label>
