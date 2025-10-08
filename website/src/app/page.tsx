@@ -3,7 +3,6 @@ import SecondScreen from "@/components/SecondScreen";
 import ThirdScreen from "@/components/ThirdScreen";
 import FourthScreen from "@/components/FourthScreen";
 import FifthScreen from "@/components/FifthScreen";
-import Footer from "@/components/Footer";
 import ScrollingCardsMarquee from "@/components/ScrollingCardsMarquee";
 import PricingSection from "@/components/PricingSection";
 
@@ -62,8 +61,6 @@ export default function Home() {
     {/* Fifth screen */}
     {/* @ts-expect-error Server Component boundary for client component import */}
     <FifthScreen />
-    {/* Footer */}
-    <Footer />
     {/* Scrolling cards marquee */}
     <ScrollingCardsMarquee
       items={[
@@ -76,6 +73,8 @@ export default function Home() {
       speedMs={26000}
     />
     <PricingSection />
+    {/* Footer at the very end */}
+    <Footer />
     </>
   );
 }
