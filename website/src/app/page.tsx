@@ -65,11 +65,11 @@ export default function Home() {
     {/* Scrolling cards marquee */}
     <ScrollingCardsMarquee
       items={[
-        { title: "Casual· Dining", imageSrc: "/images/tab1.jpg" },
-        { title: "Fine-Dining", imageSrc: "/images/tab2.jpg" },
-        { title: "Bars & Coffee Shops", imageSrc: "/images/tab1.jpg" },
-        { title: "Quick-Service", imageSrc: "/images/tab2.jpg" },
-        { title: "Chain", imageSrc: "/images/tab1.jpg" },
+        { title: "Casual Dining", imageSrc: "/images/casual.jpg" },
+        { title: "Fine Dining", imageSrc: "/images/finedining.jpg" },
+        { title: "Bars", imageSrc: "/images/bars.jpg" },
+        { title: "Casual Dining", imageSrc: "/images/casual.jpg" },
+        { title: "Fine Dining", imageSrc: "/images/finedining.jpg" },
       ]}
       speedMs={26000}
     />
