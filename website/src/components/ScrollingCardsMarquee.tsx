@@ -29,9 +29,9 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
         <p className="mt-2 text-center text-sm text-neutral-500">No sector is left out</p>
       </div>
 
-      <div className="relative mt-6 overflow-hidden">
+      <div className="relative mt-6 overflow-visible">
         <div
-          className="marquee flex w-[200%] items-stretch"
+          className="marquee flex w-[200%] items-stretch motion-reduce:animate-none"
           style={{ animationDuration: `${speedMs}ms` }}
         >
           {loopItems.map((item, idx) => (
@@ -59,9 +59,7 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
             </article>
           ))}
         </div>
-        {/* Fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />
+        {/* Removed edge fades per request */}
       </div>
     </section>
   );

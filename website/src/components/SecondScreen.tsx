@@ -47,7 +47,7 @@ export default function SecondScreen() {
                 variants={{ visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.4, delay: 0.2 }}
             >
-                <Button asChild className="bg-[#3D3ADB] px-6 text-white hover:bg-[#3D3ADB]">
+                <Button asChild className="rounded-none bg-[#3D3ADB] px-6 text-white hover:bg-[#3D3ADB]">
                     <Link href="/signup">JOIN FOR €0</Link>
                 </Button>
             </motion.div>

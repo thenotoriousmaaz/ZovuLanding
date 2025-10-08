@@ -3,6 +3,7 @@ import SecondScreen from "@/components/SecondScreen";
 import ThirdScreen from "@/components/ThirdScreen";
 import FourthScreen from "@/components/FourthScreen";
 import FifthScreen from "@/components/FifthScreen";
+import Footer from "@/components/Footer";
 import ScrollingCardsMarquee from "@/components/ScrollingCardsMarquee";
 import PricingSection from "@/components/PricingSection";
 
@@ -39,7 +40,7 @@ export default function Home() {
               placeholder="your@workemail.com"
             />
           </div>
-          <div className="mt-10 h-6 w-px bg-white/80" />
+          {/* removed stray caret/line */}
         </div>
 
         <p className="mb-2 text-[10px] text-neutral-300">
@@ -61,6 +62,8 @@ export default function Home() {
     {/* Fifth screen */}
     {/* @ts-expect-error Server Component boundary for client component import */}
     <FifthScreen />
+    {/* Footer */}
+    <Footer />
     {/* Scrolling cards marquee */}
     <ScrollingCardsMarquee
       items={[
