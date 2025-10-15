@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 
 export default function FifthScreen() {
     return (
-        <section className="mx-auto w-full max-w-7xl px-6 py-24">
+        <section className="mx-auto w-full max-w-[1400px] px-8 py-28">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                 <div className="flex items-start justify-center">
                     <Card className="relative h-[520px] w-[380px] overflow-hidden rounded-2xl">
@@ -16,7 +16,7 @@ export default function FifthScreen() {
                 </div>
                 <div>
                     <div className="text-xs text-neutral-500">{`(Our Customer App)`}</div>
-                    <h3 className="mt-2 text-3xl font-medium">
+                    <h3 className="mt-2 text-4xl font-medium md:text-5xl">
                         We Will get you
                         <br />
                         <span className="bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-transparent">New Customers</span>

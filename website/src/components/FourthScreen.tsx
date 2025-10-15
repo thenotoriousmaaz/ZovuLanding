@@ -56,10 +56,10 @@ const slides = [
 
 export default function FourthScreen() {
     return (
-        <section className="mx-auto w-full max-w-7xl px-6 py-12 min-h-screen">
+        <section className="mx-auto w-full max-w-[1400px] px-8 py-16 min-h-screen">
             <div className="mb-6">
-                <h3 className="text-3xl font-medium"><span className="bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-transparent">Unlock your Restaurant Potential</span></h3>
-                <p className="mt-1 text-xs text-neutral-500">Our unic features and making it one connected OS set us apart</p>
+                <h3 className="text-4xl font-medium md:text-5xl"><span className="bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-transparent">Unlock your Restaurant Potential</span></h3>
+                <p className="mt-2 text-sm text-neutral-500">Our unic features and making it one connected OS set us apart</p>
             </div>
             <AutoCarousel items={slides} intervalMs={3500} className="h-[calc(100vh-180px)]" />
         </section>
