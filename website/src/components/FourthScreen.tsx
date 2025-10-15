@@ -16,12 +16,22 @@ export default function FourthScreen() {
                     <a href="#" className="mt-3 inline-block text-[11px] text-[#3D3ADB] underline">Learn More</a>
                 </div>
 
-                {/* Center device mock */}
+                {/* Center device (SVG tablet) */}
                 <div className="order-1 md:order-2">
-                    <div className="relative mx-auto aspect-[16/10] w-full max-w-[820px] rotate-[10deg] rounded-[28px] bg-neutral-900 shadow-[0_40px_120px_rgba(0,0,0,0.35)]">
-                        {/* inner screen gloss */}
-                        <div className="absolute inset-0 rounded-[28px] bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.08),rgba(0,0,0,0.9))]" />
-                        <div className="absolute inset-0 rounded-[28px] ring-1 ring-white/10" />
+                    <div className="relative mx-auto w-full max-w-[900px] rotate-[12deg]">
+                        <svg viewBox="0 0 900 560" className="h-auto w-full drop-shadow-[0_50px_140px_rgba(0,0,0,0.35)]">
+                            <rect x="20" y="20" width="860" height="520" rx="40" fill="#111319" />
+                            <rect x="60" y="60" width="780" height="440" rx="28" fill="#ffffff" />
+                            <defs>
+                                <radialGradient id="vignette" cx="50%" cy="45%" r="65%">
+                                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+                                    <stop offset="100%" stopColor="#000000" stopOpacity="0.08" />
+                                </radialGradient>
+                            </defs>
+                            <rect x="60" y="60" width="780" height="440" rx="28" fill="url(#vignette)" />
+                            <circle cx="450" cy="42" r="6" fill="#2b2f3a" />
+                            <rect x="20" y="20" width="860" height="520" rx="40" fill="none" stroke="#2a2f3a" strokeWidth="3" />
+                        </svg>
                     </div>
                 </div>
 
