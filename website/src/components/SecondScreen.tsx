@@ -20,7 +20,7 @@ export default function SecondScreen() {
     }, [inView, controls]);
 
     return (
-        <section ref={ref} className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-start gap-6 bg-white px-4 py-12 text-center text-neutral-900">
+        <section ref={ref} className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-start gap-6 bg-white px-6 py-12 text-center text-neutral-900">
             <motion.h2
                 initial={{ opacity: 0, y: 12 }}
                 animate={controls}

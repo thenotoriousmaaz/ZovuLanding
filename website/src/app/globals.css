@@ -121,10 +121,14 @@
   }
 }
 
-/* Marquee animation for scrolling cards */
-@keyframes marquee-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* Marquee animation for scrolling cards: dual-track for seamless loop */
+@keyframes marquee-track-1 {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
-
-.marquee { animation: marquee-left linear infinite; }
+@keyframes marquee-track-2 {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+.marquee-track { animation: marquee-track-1 linear infinite; will-change: transform; }
+.marquee-track-ghost { animation: marquee-track-2 linear infinite; will-change: transform; }

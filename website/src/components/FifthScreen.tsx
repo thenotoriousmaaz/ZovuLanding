@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 
 export default function FifthScreen() {
     return (
-        <section className="mx-auto w-full max-w-6xl px-4 py-24">
+        <section className="mx-auto w-full max-w-7xl px-6 py-24">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                 <div className="flex items-start justify-center">
                     <Card className="relative h-[520px] w-[380px] overflow-hidden rounded-2xl">

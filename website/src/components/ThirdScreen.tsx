@@ -21,7 +21,7 @@ function Trigger({ children }: { children: React.ReactNode }) {
 
 export default function ThirdScreen() {
     return (
-        <section className="mx-auto w-full max-w-6xl px-4 py-28 min-h-[110vh]">
+        <section className="mx-auto w-full max-w-7xl px-6 py-28 min-h-[110vh]">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                 {/* Left column: heading + small link + accordion */}
                 <div>
