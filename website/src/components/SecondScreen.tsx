@@ -1,10 +1,9 @@
 "use client";
 
 import { motion, useAnimation, useInView } from "framer-motion";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 const TabletsCanvas = dynamic(() => import("@/components/TabletsCanvas"), { ssr: false });
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

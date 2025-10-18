@@ -3,8 +3,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Bounds, Center, Environment, Html, useGLTF } from "@react-three/drei";
 import { Box3, Vector3 } from "three";
-import type { Group } from "three";
-import { useRef } from "react";
+// cleaned unused types/imports
 import { Suspense } from "react";
 
 function TabletModel({ path, fallbackRotation = 0, desiredMax = 2, scaleMultiplier = 1.0 }: { path: string; fallbackRotation?: number; desiredMax?: number; scaleMultiplier?: number }) {

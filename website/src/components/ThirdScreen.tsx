@@ -1,6 +1,4 @@
 "use client";
-
-import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Plus, Minus } from "lucide-react";

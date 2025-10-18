@@ -6,12 +6,16 @@ if (!MONGODB_URI) {
     throw new Error("MONGODB_URI is not defined in environment variables");
 }
 
-let cached = (global as unknown as { mongoose?: { conn: typeof mongoose | null; promise: Promise<typeof mongoose> | null } }).mongoose;
+type MongooseCache = { conn: typeof mongoose | null; promise: Promise<typeof mongoose> | null };
+type MongooseGlobal = typeof globalThis & { mongoose?: MongooseCache };
 
-if (!cached) {
-    cached = { conn: null, promise: null };
-    (global as unknown as { mongoose: { conn: typeof mongoose | null; promise: Promise<typeof mongoose> | null } }).mongoose = cached;
+const globalForMongoose = global as MongooseGlobal;
+
+if (!globalForMongoose.mongoose) {
+    globalForMongoose.mongoose = { conn: null, promise: null };
 }
+
+const cached = globalForMongoose.mongoose as MongooseCache; // now guaranteed defined
 
 export async function connectToDatabase(): Promise<typeof mongoose> {
     if (cached.conn) {
