@@ -1,15 +1,15 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { Bounds, Center, Environment, Html, useGLTF } from "@react-three/drei";
-import { Box3, Vector3, MathUtils } from "three";
+import { Box3, Vector3 } from "three";
+import type { Group } from "three";
 import { useRef } from "react";
 import { Suspense } from "react";
 
 function TabletModel({ path, fallbackRotation = 0, desiredMax = 2, scaleMultiplier = 1.0 }: { path: string; fallbackRotation?: number; desiredMax?: number; scaleMultiplier?: number }) {
     // Try load GLB; if missing, render a simple rounded rectangle as placeholder
     try {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
         const gltf = useGLTF(path);
         // Normalize model so its largest dimension ~= desiredMax, then multiply
         const bbox = new Box3().setFromObject(gltf.scene);
@@ -33,35 +33,7 @@ function TabletModel({ path, fallbackRotation = 0, desiredMax = 2, scaleMultipli
     }
 }
 
-function AnimatedTablet({
-    path,
-    initialX,
-    targetX,
-    targetRotY,
-    scaleMultiplier,
-}: { path: string; initialX: number; targetX: number; targetRotY: number; scaleMultiplier: number }) {
-    const groupRef = useRef<THREE.Group>(null);
-    const content = <TabletModel path={path} fallbackRotation={0} desiredMax={2.2} scaleMultiplier={scaleMultiplier} />;
-
-    useFrame((_, dt) => {
-        const g = groupRef.current;
-        if (!g) return;
-        // progress-based easing to target
-        const speed = 2.0; // seconds
-        g.position.x = MathUtils.damp(g.position.x, targetX, speed, dt);
-        g.rotation.y = MathUtils.damp(g.rotation.y, targetRotY, speed, dt);
-        // Scale handled inside TabletModel; keep group scale at 1
-        g.scale.x = MathUtils.damp(g.scale.x, 1, speed, dt);
-        g.scale.y = MathUtils.damp(g.scale.y, 1, speed, dt);
-        g.scale.z = MathUtils.damp(g.scale.z, 1, speed, dt);
-    });
-
-    return (
-        <group ref={groupRef} position={[initialX, -0.2, 0]} rotation={[0, 0, 0]}>
-            {content}
-        </group>
-    );
-}
+// Removed unused AnimatedTablet component
 
 export default function TabletsCanvas() {
     return (
