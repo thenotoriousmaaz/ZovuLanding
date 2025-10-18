@@ -1,6 +1,5 @@
 "use client";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
 import { Plus, Minus } from "lucide-react";
 
 function Trigger({ children }: { children: React.ReactNode }) {
@@ -65,13 +64,7 @@ export default function ThirdScreen() {
 
                 {/* Right column: blurred background with centered preview card */}
                 <div className="relative min-h-[60vh]">
-                    <div className="absolute inset-0 rounded-xl bg-[url('/images/bars.jpg')] bg-cover bg-center opacity-60" />
-                    <div className="relative z-10 flex h-full items-center justify-center p-6">
-                        <Card className="h-[320px] w-[520px] rounded-xl bg-black">
-                            {/* Placeholder for video/screenshot */}
-                            <div className="h-full w-full rounded-xl bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),rgba(0,0,0,0.9))]" />
-                        </Card>
-                    </div>
+                    <div className="absolute inset-0 rounded-xl bg-[url('/images/zovurestaurant1.jpg')] bg-cover bg-center" />
                 </div>
             </div>
         </section>

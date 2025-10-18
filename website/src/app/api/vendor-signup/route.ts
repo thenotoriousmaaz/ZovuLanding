@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { connectToDatabase } from "@/lib/db";
 import { Vendor } from "@/lib/models/Vendor";
-import { Resend } from "resend";
+// Send email via Resend REST API to avoid SDK peer deps
 
 const vendorSchema = z.object({
     companyName: z.string().min(2),
@@ -27,13 +27,23 @@ export async function POST(request: Request) {
         const created = await Vendor.create(data);
 
         if (process.env.RESEND_API_KEY && process.env.VENDOR_NOTIFY_EMAIL_FROM && process.env.VENDOR_NOTIFY_EMAIL_TO) {
-            const resend = new Resend(process.env.RESEND_API_KEY);
-            await resend.emails.send({
-                from: process.env.VENDOR_NOTIFY_EMAIL_FROM,
-                to: process.env.VENDOR_NOTIFY_EMAIL_TO,
-                subject: "New Vendor Signup",
-                text: `New vendor signup:\nCompany: ${created.companyName}\nContact: ${created.contactName}\nEmail: ${created.email}\nPhone: ${created.phone || "-"}\nWebsite: ${created.website || "-"}`
+            const response = await fetch("https://api.resend.com/emails", {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    from: process.env.VENDOR_NOTIFY_EMAIL_FROM,
+                    to: process.env.VENDOR_NOTIFY_EMAIL_TO,
+                    subject: "New Vendor Signup",
+                    text: `New vendor signup:\nCompany: ${created.companyName}\nContact: ${created.contactName}\nEmail: ${created.email}\nPhone: ${created.phone || "-"}\nWebsite: ${created.website || "-"}`
+                })
             });
+            if (!response.ok) {
+                // Do not fail the request if email fails; just log server-side
+                console.error("Failed to send Resend email", await response.text());
+            }
         }
 
         return NextResponse.json({ success: true }, { status: 201 });

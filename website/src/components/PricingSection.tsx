@@ -12,7 +12,7 @@ export default function PricingSection() {
         <div className="flex items-start justify-center">
           <div className="relative h-[520px] w-[560px] overflow-hidden rounded-xl ring-1 ring-black/10">
             <Image
-              src="/images/tab2.jpg"
+              src="/images/cost.jpg"
               alt="Pricing comparison"
               fill
               className="object-cover"
