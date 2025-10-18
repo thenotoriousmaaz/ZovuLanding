@@ -58,7 +58,7 @@ export default function SignupStep2() {
 
             <label className="mt-2 flex items-center gap-2 text-xs text-neutral-600">
               <input type="checkbox" className="h-4 w-4 rounded border-neutral-300" />
-              <span>I have read and accept ZOVU's Terms and Condition's</span>
+              <span>I have read and accept ZOVU&apos;s Terms and Conditions</span>
             </label>
 
             <Button asChild className="mt-4 h-12 w-full rounded-md bg-[#3D3ADB] text-white hover:bg-[#3D3ADB]">
