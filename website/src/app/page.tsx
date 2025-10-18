@@ -50,17 +50,13 @@ export default function Home() {
     </section>
     <div className="bg-white">
       {/* Second screen */}
-      {/* @ts-expect-error Server Component boundary for client component import */}
       <SecondScreen />
     </div>
     {/* Third screen placeholder */}
-    {/* @ts-expect-error Server Component boundary for client component import */}
     <ThirdScreen />
     {/* Fourth screen carousel */}
-    {/* @ts-expect-error Server Component boundary for client component import */}
     <FourthScreen />
     {/* Fifth screen */}
-    {/* @ts-expect-error Server Component boundary for client component import */}
     <FifthScreen />
     {/* Scrolling cards marquee */}
     <ScrollingCardsMarquee
