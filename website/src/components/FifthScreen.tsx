@@ -11,7 +11,7 @@ export default function FifthScreen() {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                 <div className="flex items-start justify-center">
                     <Card className="relative h-[520px] w-[380px] overflow-hidden rounded-2xl">
-                        <Image src="/images/customer-app.jpg" alt="Customer app" fill className="object-cover" />
+                        <Image src="/images/casual.jpg" alt="Customer app" fill className="object-cover" />
                     </Card>
                 </div>
                 <div>
