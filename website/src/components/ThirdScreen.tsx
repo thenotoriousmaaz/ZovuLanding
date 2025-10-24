@@ -18,53 +18,53 @@ function Trigger({ children }: { children: React.ReactNode }) {
 
 export default function ThirdScreen() {
     return (
-        <section className="mx-auto w-full max-w-[1400px] px-8 py-32 min-h-[110vh]">
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <section className="mx-auto w-full max-w-[1600px] px-10 py-36 min-h-[110vh]">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.25fr]">
                 {/* Left column: heading + small link + accordion */}
                 <div>
-                    <div className="text-xs text-neutral-500">{`{Point Of Sales}`}</div>
-                    <h3 className="mt-2 text-4xl font-medium leading-tight md:text-5xl">
+                    <div className="text-sm text-neutral-500">{`{Point Of Sales}`}</div>
+                    <h3 className="mt-2 text-5xl font-medium leading-tight md:text-6xl">
                         Some of our <span className="bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-transparent">features</span>
                         <br /> that makes us the best
                     </h3>
-                    <a href="#" className="mt-3 inline-block text-[11px] text-[#3D3ADB] underline">
+                    <a href="#" className="mt-3 inline-block text-sm text-[#3D3ADB] underline">
                         Check out our Pos Solution
                     </a>
 
-                    <Accordion type="single" collapsible className="mt-8 divide-y rounded-xl bg-white">
+                    <Accordion type="single" collapsible className="mt-10 divide-y rounded-xl bg-white">
                         <AccordionItem value="item-1" className="px-4">
                             <Trigger>One Centralized OS</Trigger>
                             <AccordionContent>
-                                <p className="pb-4 text-xs text-neutral-600">
+                                <p className="pb-4 text-sm text-neutral-600">
                                     See who reserved online/ offline, no need for a 3th party system saving you money
                                 </p>
-                                <a href="#" className="mb-4 inline-block text-[11px] text-[#3D3ADB] underline">Learn more</a>
+                                <a href="#" className="mb-4 inline-block text-sm text-[#3D3ADB] underline">Learn more</a>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2" className="px-4">
                             <Trigger>Reservations in your POS</Trigger>
                             <AccordionContent>
-                                <p className="pb-4 text-xs text-neutral-600">Manage reservations seamlessly inside your POS.</p>
+                                <p className="pb-4 text-sm text-neutral-600">Manage reservations seamlessly inside your POS.</p>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3" className="px-4">
                             <Trigger>Data Overload</Trigger>
                             <AccordionContent>
-                                <p className="pb-4 text-xs text-neutral-600">Insights without the noise, summarized for action.</p>
+                                <p className="pb-4 text-sm text-neutral-600">Insights without the noise, summarized for action.</p>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4" className="px-4">
                             <Trigger>Ease of use</Trigger>
                             <AccordionContent>
-                                <p className="pb-4 text-xs text-neutral-600">Simple flows, faster onboarding, fewer taps.</p>
+                                <p className="pb-4 text-sm text-neutral-600">Simple flows, faster onboarding, fewer taps.</p>
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
                 </div>
 
                 {/* Right column: blurred background with centered preview card */}
-                <div className="relative min-h-[60vh]">
-                    <div className="absolute inset-0 rounded-xl bg-[url('/images/zovurestaurant1.jpg')] bg-cover bg-center" />
+                <div className="relative min-h-[70vh] md:-mr-6 lg:-mr-10">
+                    <div className="absolute inset-0 rounded-2xl bg-[url('/images/zovurestaurant1.jpg')] bg-cover bg-right" />
                 </div>
             </div>
         </section>

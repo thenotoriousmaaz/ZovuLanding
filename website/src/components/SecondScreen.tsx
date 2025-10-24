@@ -19,13 +19,13 @@ export default function SecondScreen() {
     }, [inView, controls]);
 
     return (
-        <section ref={ref} className="relative mx-auto flex min-h-screen w-full max-w-[1400px] flex-col items-center justify-start gap-8 bg-white px-8 py-14 text-center text-neutral-900">
+        <section ref={ref} className="relative mx-auto flex min-h-screen w-full max-w-[1600px] flex-col items-center justify-start gap-10 bg-white px-10 py-16 text-center text-neutral-900">
             <motion.h2
                 initial={{ opacity: 0, y: 12 }}
                 animate={controls}
                 variants={{ visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.5 }}
-                className="mt-2 text-4xl font-medium tracking-wide bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl"
+                className="mt-2 text-3xl font-normal tracking-wide bg-gradient-to-r from-[#0F0E47] to-[#3D3ADB] bg-clip-text text-transparent sm:text-4xl md:text-5xl lg:text-6xl"
             >
                 ZOVU OS
             </motion.h2>
@@ -34,7 +34,7 @@ export default function SecondScreen() {
                 animate={controls}
                 variants={{ visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-[0.95rem] font-light text-neutral-600 sm:text-base"
+                className="-mt-3 text-lg font-normal text-neutral-600 sm:text-xl md:text-2xl lg:text-3xl"
             >
                 One Centralized System.
                 <br />
@@ -46,7 +46,7 @@ export default function SecondScreen() {
                 variants={{ visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.4, delay: 0.2 }}
             >
-                <Button asChild className="rounded-none bg-[#3D3ADB] px-6 text-white hover:bg-[#3D3ADB]">
+                <Button asChild className="rounded-none bg-[#3D3ADB] px-8 py-6 text-lg text-white hover:bg-[#3D3ADB]">
                     <Link href="/signup">JOIN FOR €0</Link>
                 </Button>
             </motion.div>
@@ -56,7 +56,7 @@ export default function SecondScreen() {
                 animate={controls}
                 variants={{ visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative mt-10 w-full"
+                className="relative mt-2 w-full"
             >
                 <TabletsCanvas />
             </motion.div>

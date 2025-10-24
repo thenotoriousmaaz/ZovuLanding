@@ -18,26 +18,26 @@ export default function ScrollingCardsMarquee({ items, speedMs = 25000 }: Scroll
   const loopItems = React.useMemo(() => [...items, ...items], [items]);
 
   return (
-    <section aria-label="Designed for every Style of Restaurants" className="w-full bg-white py-16 text-neutral-900">
-      <div className="mx-auto max-w-6xl px-4">
+    <section aria-label="Designed for every Style of Restaurants" className="w-full bg-white py-20 text-neutral-900">
+      <div className="mx-auto max-w-[1600px] px-10">
         <h2
-          className="text-center text-3xl font-bold text-neutral-900 sm:text-4xl md:text-5xl"
+          className="text-center text-4xl font-bold text-neutral-900 sm:text-5xl md:text-6xl"
           style={{ fontFamily: "var(--font-libre-baskerville)" }}
         >
           Designed for every Style of Restaurants
         </h2>
-        <p className="mt-2 text-center text-sm text-neutral-500">No sector is left out</p>
+        <p className="mt-2 text-center text-base text-neutral-500">No sector is left out</p>
       </div>
 
-      <div className="relative mt-6 h-[460px] overflow-hidden">
+      <div className="relative mt-8 h-[520px] overflow-hidden">
         <div className="marquee flex h-full w-[200%] items-stretch" style={{ animationDuration: `${speedMs}ms` }}>
           {loopItems.map((item, idx) => (
-            <article key={`${item.title}-${idx}`} className="mx-3 relative h-full w-[320px] shrink-0 overflow-hidden rounded-none shadow-[0_16px_40px_rgba(0,0,0,0.2)] ring-1 ring-black/10">
+            <article key={`${item.title}-${idx}`} className="mx-4 relative h-full w-[380px] shrink-0 overflow-hidden rounded-none shadow-[0_16px_40px_rgba(0,0,0,0.2)] ring-1 ring-black/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={item.imageSrc} alt={item.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-black/20" />
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <h3 className="px-4 text-center text-2xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">{item.title}</h3>
+                <h3 className="px-4 text-center text-3xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">{item.title}</h3>
               </div>
             </article>
           ))}
